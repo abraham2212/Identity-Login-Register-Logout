@@ -1,0 +1,54 @@
+﻿@model RegisterVM
+@{
+    ViewData["Title"] = "Register";
+}
+<div class="col-md-4 col-md-offset-4" id="login">
+	<section id="inner-wrapper" class="login">
+		<h2>Register</h2>
+		<div class="text-danger" asp-validation-summary="All"></div>
+		<article>
+			<form method="post" asp-action="Register" >
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-user"> </i></span>
+						<input class="form-control" asp-for="FullName" placeholder="FullName">
+						<span class="text-danger" asp-validation-for="FullName"></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
+						<input class="form-control" asp-for="Email" placeholder="Email">
+						<span class="text-danger" asp-validation-for="Email"></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-key"> </i></span>
+						<input class="form-control" asp-for="Username" placeholder="Username">
+						<span class="text-danger" asp-validation-for="Username"></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-key"> </i></span>
+						<input class="form-control" asp-for="Password" placeholder="Password">
+						<span class="text-danger" asp-validation-for="Password"></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-key"> </i></span>
+						<input class="form-control" asp-for="ConfirmPassword" placeholder="Confirm Password">
+						<span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+					</div>
+				</div>
+				<div class="form-group">
+				<input type="checkbox"asp-for="IsRememberMe"><label for="rememberMe">Remember me</label>
+				</div>
+				<button type="submit" class="btn btn-success btn-block">Submit</button>
+			</form>
+		</article>
+	</section>
+</div>
+
